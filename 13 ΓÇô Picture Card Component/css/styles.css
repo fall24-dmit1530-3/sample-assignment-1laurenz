@@ -1,0 +1,46 @@
+:root {
+    --nunito: 2em/1.5 'Nunito', 'Helvetica Neue', sans-serif;
+    --open-sans: 1rem/1.5 'Open Sans', sans-serif;
+    --box-shadow: 0 0 10px 0 rgb(33 33 33 / 15%);
+    --black: #212121;
+    --red: #c0232a;
+}
+
+h1{
+    text-align: center;
+    width: 100%;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+section{
+    display: flex;
+    margin: 0 0 1rem;
+    border: 1px solid black;
+}
+
+picture{
+    min-width: 35%;
+}
+
+picture+div{
+    padding: 2rem 1rem;
+}
+
+@media(min-width: 850px){
+    section{
+        display: unset;
+        flex-basis: 200px;
+        flex-grow: 1;
+    }
+
+    article{
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
