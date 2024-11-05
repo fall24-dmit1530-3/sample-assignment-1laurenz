@@ -1,0 +1,98 @@
+/* Global Variables */
+
+:root {
+    --cyan-900: #006064;
+    --cyan-700: #0097a7;
+    --grey-50: #eceff1;
+    --grey-100: #cfd8dc;
+    --grey-900: #263238;
+    --box-shadow: 10px 10px 19px 0px rgba(236, 239, 241, 1);
+}
+
+/* Soft Reset */
+
+body {
+    color: var(--grey-900);
+    font-family: "Open Sans", sans-serif;
+}
+
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+svg {
+    height: 1.125rem;
+}
+
+a{
+    display: block;
+    padding: 1rem 1rem;
+}
+
+a:hover{
+    background-color: orange;
+}
+
+ul{
+    padding-left: 0;
+}
+
+ul a{
+    padding-left: 2rem;
+}
+
+ul ul a{
+    padding-left: 4rem;
+}
+
+ul ul ul a{
+    padding-left: 6rem;
+}
+
+li{
+    position: relative;
+}
+
+@media(min-width: 600px){
+    nav>ul{
+        display: flex;
+    }
+
+    ul ul{
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: 1px solid grey;
+    }
+
+    li:hover>ul{
+        display: block;
+    }
+
+    ul ul ul{
+        left: 100%;
+        top: 0;
+    }
+
+    ul a,
+    ul ul a,
+    ul ul ul a{
+        padding: 1rem;
+    }
+
+    a{
+        white-space: nowrap;
+    }
+
+    header .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav>ul>li:last-of-type>ul{
+        right: 0;
+    }
+}
